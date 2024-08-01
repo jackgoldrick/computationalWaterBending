@@ -1,0 +1,206 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+% \theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+
+\title{Neural Net Aided Solutions to Post Collision Behavior of Yield-Stress Fluids}
+\author{Jack R. Goldrick}
+
+\begin{document}
+
+
+
+\maketitle
+
+\begin{abstract}
+In the absence of governing equations, understanding the behavior of momentum in Yield-Stress Fluids (YSFs) can be rather difficult. These governing equations, such as a system of PDE's, are transformable to a non-unique non-dimensionalized space. A common method used is the Buckingham Pi Theorem which creates its famous pi-groups to accomplsudo dnf install dotnet-sdk-8.0ish the desired transformation. In 2015, TK Blackwell TK conducted an experiment to determine the post collision behavior of rheological fluids resulting in 5 regimes maps and a governing dimensionless variable that accurately describes the behavior. This study aims to develop a low resource neural net aided solution to identifying the behavior of the yield-stress fulids studied by Blackwell et al.
+
+\end{abstract}
+
+\section{Introduction}
+
+\subsection{Background}
+
+Yield-stress fluids are a vital resource in Industrial Engineering. These fluids are used in areas relating to agriculture and food processing, feedback control and safety systems, along with manufacturing [I Think I need to reference this].  Many of these processes can be aided by having real-time data driven methods that can provide an optimized and low-cost feedback control platform. Computational Fluid Dynamics (CFD) is extremely resource intensive and cannot be reliably used for real-time control. For reference, a simple T-Junction pipe flow solution from my undergrad took about 1.5hrs to fully render results on a GPU architecture.  This glaring inefficiency overtly exceeds an acceptable time-to-compute (TTC) and must be optimized to handle scaling required by Industry. Many industry applications may involve fluid droplets contacting wet and/or dry surfaces and this simple difference can have dramatic consequences. To describe this difference, Blackwell [TK TK] denotes a situation where the parameter, surface hydrophobicity, may hold no predictive value, but the impact surface is completely wet prior to collision. This surface condition increases the minimum dimension of a model's parameter space. In the case described by Blackwell, the added parameter (dimension) is the thickness of the pre-coating layer which has high predictive value in models used to predict the collision behaviors of the described situation. So in the absence of governing equations how is one possibly supposed to arrive at the conclusion described by Blackwell? 
+
+\subsection{Buckingham Pi}
+    
+Since its discovery in the late 1800s as a generalization to the Rayleigh Method, the Buckingham Pi Theorem has become a quintessential tool used in dimensional analysis.  The Buckingham Pi theorem states there exists a set of dimensionless quantities, known as $\pi$-groups, that span the full dimensionless solution space.  A probabilistic corollary to the theorem states there must exist some function that projects a dataset to a lower dimensional space without a significant increase in the predictive error on the dataset [TK I think this needs a cite? it is heavily paraphrase from blackwell].  Blackwell's absence of governing equations makes Buckingham Pi the perfect analytical tool to gain a glimpse into the dynamics of momentum in Yield-Stress Fluids.  It is important to note that may be fruitless to fully map all parameters, $p \in \mathbb{P}$, that dictate the full dynamics of a system.  This fruitless overtone is a consequence of Buckingham Pi's one major pitfall: a set of $\pi$-groups derived from the solution is not unique.  Properties such as shear viscosity have been shown to be quite difficult to measure and can lead to a gap in necessary information for regression-based modeling, especially if the parameter has a high predictive value.  Machine learning algorithms can circumvent the need to understand the governing dynamics thus making algorithms like SINDy unnecessary in applications described by Blackwell. This philosophy will be later used to derive a new use case for Buckingham Pi with respect to machine learning applications.
+
+\subsection{Machine Learning and Graphs}
+
+Given the general behavior of YSFs, there are many computational complexities and accuracy issues that arise from linear algorithms trying to predict high dimensional non-linear phenomena of YSFs.  Certain machine learning algorithms have been shown to model well under these conditions and can provide the multi-class outputs needed to accurately model YSFs in the absence of a differential system.  Ideally, these algorithms should help find some map $f: \mathbb{P} \xrightarrow{} \mathbb{D}$ that maps every dimensional input parameter $\boldsymbol{p}\in \mathbb{P}$ to a classification category $\boldsymbol{d}\in \mathbb{D}$ such that error is minimized.  Decision Tree and Neural Net based algorithms are readily equipped to fit and evaluate these kinds of datasets since they are both variations of Directed Acylic Computational Graphs (DACGs).
+%  This is a Direct Quote from my textbook. How should this be cited?
+\begin{definition}[Directed Acyclic Computational Graph]
+    A directed acyclic computational graph contains nodes, so that each node is 
+    associated with a variable. A set of directed edges connect nodes, which indicate functional relationships among nodes. Edges might be associated with learnable parameters. A variable in a node is either fixed externally (for input nodes with no incoming edges), or it is computed as a function of the variables in the tail ends of edges incoming into the node and the learnable parameters on the incoming edges.
+\end{definition}
+
+\subsubsection{Decision Trees and Random Forests}
+
+Decision Trees are used to represent that ideal map $f$ mentioned above.  Generally, Decision Trees are comprised of nodes connected by unweighted directed edges. Decision Trees are analogous to a set of step-by-step instructions on computing the function value $f(\boldsymbol{p})$ given the features of each $\boldsymbol{p}\in \mathbb{P}$. Decision tree methods use as a hypothesis space the set of all hypotheses which
+represented by some collection of decision trees. A random forest expands on this by fitting a number of decision tree classifiers on various sub-samples of the dataset and uses averaging to improve the predictive accuracy and control over-fitting. These methods
+search for a decision trees such that the corresponding hypothesis has minimum
+average loss on some labeled training data [TK Mostly quoted from keras documentation]. These models begin by feeding each $\boldsymbol{p}$ through a root node and outputting each $\boldsymbol{d}$ at a leaf node.  A leaf node $l$, an edge-less node, represent a decision function $\mathcal{S}_l \subseteq \mathbb{P}$ in the feature space.  The leaf nodes in the context of Blackwell's Data are the classification categories: the unique elements of $f(\mathbb{P})$.
+
+% tree is constant over the regions Rm , such that h(x) = h m for all x ∈ Rm and some
+% fixed number h m ∈ R.
+
+
+\subsubsection{Neural Networks and Deep Learning}
+
+
+
+
+ % \newline
+ % \newline
+ % \newline
+ % \newline
+ % \newline
+
+% AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA \newline
+% AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA \newline
+% AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA \newline
+% AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA \newline
+% AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA \newline
+% AAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH \newline
+% HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+
+
+
+
+% , potentially restrictive, conditions and even outperform regressors by a factor of 1.5. 
+
+ % of Blackwell's dataset: multidimensional inputs with multiple qualitative outputs.
+
+% leading to many issues with creating accurate models of behavior [TK I think this needs a cite? it is heavily paraphrase from blackwell].     
+
+% TK TK Do i need to tek a sample of the buckingham pi procedure?
+
+% I do not know what else would be pertinent?
+
+
+
+
+
+
+% There are many computational complexities and accuracy issues arise from linear machines trying to predict high dimensional non-linear phenomena.
+
+
+
+\section{Methodology}
+
+
+There was an issue with Bucki-Net that was ever present before the data was manipulated: What if Bucki-Net does not pick Blackwell's dimensionless variable as a $\pi$-group? Or worse: What if the data-driven output function is only surjective? 
+
+\subsection{Data Manipulation and Buckingham Pi}
+
+\subsection{Models}
+
+\subsubsection{Decision Trees}
+
+\subsubsection{Random Forests}
+
+\subsubsection{Gradient Boosted Forests}
+
+\subsection{Neural Networks}
+
+\subsection{How to include Figures}
+
+First you have to upload the image file from your computer using the upload link in the file-tree menu. Then use the includegraphics command to include it in your document. Use the figure environment and the caption command to add a number and a caption to your figure. See the code for Figure \ref{fig:frog} in this section for an example.
+
+Note that your figure will automatically be placed in the most appropriate place for it, given the surrounding text and taking into account other figures or tables that may be close by. You can find out more about adding images to your documents in this help article on \href{https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf}{including images on Overleaf}.
+
+
+
+% \begin{figure}
+% \centering
+% \includegraphics[width=0.25\linewidth]{frog.jpg}
+% \caption{\label{fig:frog}This frog was uploaded via the file-tree menu.}
+% \end{figure}
+
+\subsection{How to add Tables}
+
+Use the table and tabular environments for basic tables --- see Table~\ref{tab:widgets}, for example. For more information, please see this help article on \href{https://www.overleaf.com/learn/latex/tables}{tables}. 
+
+% \begin{table}
+% \centering
+% \begin{tabular}{l|r}
+% Item & Quantity \\\hline
+% Widgets & 42 \\
+% Gadgets & 13
+% \end{tabular}
+% \caption{\label{tab:widgets}An example table.}
+% \end{table}
+
+\subsection{How to add Comments and Track Changes}
+
+Comments can be added to your project by highlighting some text and clicking ``Add comment'' in the top right of the editor pane. To view existing comments, click on the Review menu in the toolbar above. To reply to a comment, click on the Reply button in the lower right corner of the comment. You can close the Review pane by clicking its name on the toolbar when you're done reviewing for the time being.
+
+Track changes are available on all our \href{https://www.overleaf.com/user/subscription/plans}{premium plans}, and can be toggled on or off using the option at the top of the Review pane. Track changes allow you to keep track of every change made to the document, along with the person making the change. 
+
+\subsection{How to add Lists}
+
+You can make lists with automatic numbering \dots
+
+\begin{enumerate}
+\item Like this,
+\item and like this.
+\end{enumerate}
+\dots or bullet points \dots
+\begin{itemize}
+\item Like this,
+\item and like this.
+\end{itemize}
+
+\subsection{How to write Mathematics}
+
+\LaTeX{} is great at typesetting mathematics. Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically distributed random variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 < \infty$, and let
+\[S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
+      = \frac{1}{n}\sum_{i}^{n} X_i\]
+denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $\mathcal{N}(0, \sigma^2)$.
+
+
+\subsection{How to change the margins and paper size}
+
+Usually the template you're using will have the page margins and paper size set correctly for that use-case. For example, if you're using a journal article template provided by the journal publisher, that template will be formatted according to their requirements. In these cases, it's best not to alter the margins directly.
+
+If however you're using a more general template, such as this one, and would like to alter the margins, a common way to do so is via the geometry package. You can find the geometry package loaded in the preamble at the top of this example file, and if you'd like to learn more about how to adjust the settings, please visit this help article on \href{https://www.overleaf.com/learn/latex/page_size_and_margins}{page size and margins}.
+
+\subsection{How to change the document language and spell check settings}
+
+Overleaf supports many different languages, including multiple different languages within one document. 
+
+To configure the document language, simply edit the option provided to the babel package in the preamble at the top of this example project. To learn more about the different options, please visit this help article on \href{https://www.overleaf.com/learn/latex/International_language_support}{international language support}.
+
+To change the spell check language, simply open the Overleaf menu at the top left of the editor window, scroll down to the spell check setting, and adjust accordingly.
+
+\subsection{How to add Citations and a References List}
+
+You can simply upload a \verb|.bib| file containing your BibTeX entries, created with a tool such as JabRef. You can then cite entries from it, like this: \cite{greenwade93}. Just remember to specify a bibliography style, as well as the filename of the \verb|.bib|. You can find a \href{https://www.overleaf.com/help/97-how-to-include-a-bibliography-using-bibtex}{video tutorial here} to learn more about BibTeX.
+
+If you have an \href{https://www.overleaf.com/user/subscription/plans}{upgraded account}, you can also import your Mendeley or Zotero library directly as a \verb|.bib| file, via the upload menu in the file-tree.
+
+\subsection{Good luck!}
+
+We hope you find Overleaf useful, and do take a look at our \href{https://www.overleaf.com/learn}{help library} for more tutorials and user guides! Please also let us know if you have any feedback using the Contact Us link at the bottom of the Overleaf menu --- or use the contact form at \url{https://www.overleaf.com/contact}.
+
+\bibliographystyle{alpha}
+\bibliography{sample}
+
+\end{document}\\

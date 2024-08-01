@@ -1,4 +1,4 @@
-Weight Percent (W.%),Height (in),Thickness (mm),Diameter (mm),Crater Diameter From Outer Edges (mm),When Breakup Starts (Frame),Breakup Location,Inflection Point?,Retraction?,Category,Comments,,,,,,,Crater Diameter From Outer Edges (mm) (not corrected)
+        Weight Percent (W.%),Height (in),Thickness (mm),Diameter (mm),Crater Diameter From Outer Edges (mm),When Breakup Starts (Frame),Breakup Location,Inflection Point?,Retraction?,Category,Comments,,,,,,,Crater Diameter From Outer Edges (mm) (not corrected)
 0.10,13.0,0.5,10.0,39.3,129,B,N,N,BUP,Bad Test,,,Stuck,,,,47.10
 0.10,13.0,0.5,15.0,44.8,130,B,N,N,BUP,,,,Stick,,,,53.70
 0.10,13.0,0.5,20.0,62.3,143,B,N,N,BUP,BAD Droplet,,,Fall,,,,74.80

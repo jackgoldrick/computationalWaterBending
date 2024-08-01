@@ -1,0 +1,59 @@
+This is TeX, Version 3.141592653 (TeX Live 2023/Fedora 40) (preloaded format=tex 2024.7.19)  28 JUL 2024 14:21
+**masterScroll.tex
+(./masterScroll.tex
+! Undefined control sequence.
+l.1 \documentclass
+                  {article}
+? 
+! Undefined control sequence.
+l.5 \usepackage
+               [english]{babel}
+? 
+! Undefined control sequence.
+l.9 \usepackage
+               [letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparw...
+
+? 
+! Undefined control sequence.
+l.12 \usepackage
+                {amsmath}
+? 
+! Undefined control sequence.
+l.13 \usepackage
+                {amssymb}
+? 
+! Undefined control sequence.
+l.14 \usepackage
+                {graphicx}
+? 
+! Undefined control sequence.
+l.15 \usepackage
+                [colorlinks=true, allcolors=blue]{hyperref}
+? 
+! Undefined control sequence.
+l.18 \newtheorem
+                {definition}{Definition}[section]
+? 
+! Undefined control sequence.
+l.21 \title
+           {Neural Net Aided Solutions to Post Collision Behavior of Yield-S...
+
+? 
+! Undefined control sequence.
+l.22 \author
+            {Jack R. Goldrick}
+? 
+! Undefined control sequence.
+l.24 \begin
+           {document}
+? 
+! Undefined control sequence.
+l.28 \maketitle
+               
+? 
+! Undefined control sequence.
+l.30 \begin
+           {abstract}
+? 
+[1] )
+Output written on masterScroll.dvi (1 page, 1536 bytes).

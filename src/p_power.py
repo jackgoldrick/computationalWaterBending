@@ -16,14 +16,14 @@ def h_conj(p):
         q = q.item()
     return q
 
-def dual(y, p, dim):
+def dual(y, p, dim, type=tc.cfloat):
     '''
     Returns the Holder p-dual of y along dimension dim
     '''
     if p == 1:
         return y.sgn()
     elif np.isinf(p) or np.isnan(p):
-        y_dual = tc.zeros(y.shape, dtype=tc.cfloat).to(device)
+        y_dual = tc.zeros(y.shape, dtype=type).to(device)
         _, ind = y.abs().max(dim=dim, keepdim=True)
         range_shape = [1 for _ in range(len(y.shape))]
         range_shape[dim] = -1
@@ -36,7 +36,7 @@ def dual(y, p, dim):
         return y_dual / tc.linalg.vector_norm(y_dual, ord=q, dim=dim, keepdim=True)
           
 
-def p_power(matrix, p, err_a=1e-6, s_max=25, v_init=None):
+def p_power(matrix, p, err_a=1e-6, s_max=25, v_init=None, type=tc.cfloat):
     '''
     Matrix operator p-norm along last two dimensions of matrix.
     '''
@@ -56,7 +56,7 @@ def p_power(matrix, p, err_a=1e-6, s_max=25, v_init=None):
     q = h_conj(p)
     
     x_dims = (dims[0], s_max, dims[3], 1)
-    x = tc.randn(*x_dims, dtype=tc.cfloat).to(device)
+    x = tc.randn(*x_dims, dtype=type).to(device)
 
     if v_init is not None:
         # unsqueeze to add the s_max dim
