@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.8)  22 SEP 2024 21:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.8)  22 SEP 2024 21:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./Complete_Dimensionless_Groups_with_Expanded_Proofs_and_Discoveries.tex
-(Complete_Dimensionless_Groups_with_Expanded_Proofs_and_Discoveries.tex
+**./v3.tex
+(v3.tex
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-07-20>
 (/home/MoDMAN200o/.miktex/texmfs/install/tex/latex/base/article.cls
@@ -501,9 +501,8 @@ ef
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count308
 \l__pdf_internal_box=\box65
-) (Complete_Dimensionless_Groups_with_Expanded_Proofs_and_Discoveries.aux)
-\openout1 = `Complete_Dimensionless_Groups_with_Expanded_Proofs_and_Discoveries
-.aux'.
+) (v3.aux)
+\openout1 = `v3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
@@ -598,16 +597,15 @@ Overfull \hbox (9.71623pt too wide) in paragraph at lines 24--25
 and isomorphic invariances of dimensionless
  []
 
-(Complete_Dimensionless_Groups_with_Expanded_Proofs_and_Discoveries.toc
+(v3.toc)
+\tf@toc=\write4
+\openout4 = `v3.toc'.
+
+
 
 [1
 
-{/home/MoDMAN200o/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}])
-\tf@toc=\write4
-\openout4 = `Complete_Dimensionless_Groups_with_Expanded_Proofs_and_Discoveries
-.toc'.
-
-
+{/home/MoDMAN200o/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}]
 Overfull \hbox (8.32056pt too wide) in paragraph at lines 62--63
 []\OT1/cmr/bx/n/10 Definition 2.3 \OT1/cmr/m/n/10 (Natural Transformation Treas
 ure)\OT1/cmr/bx/n/10 . []\OT1/cmr/m/n/10 Given two functors $\OML/cmm/m/it/10 F
@@ -627,83 +625,91 @@ ndamental measure of a physical quantity, represented
 [2]
 
 [3]
-Overfull \hbox (10.88774pt too wide) in paragraph at lines 181--182
-[]\OT1/cmr/bx/n/10 Theorem 6.1 \OT1/cmr/m/n/10 (Equivalence Enchantment Theorem
-)\OT1/cmr/bx/n/10 . []\OT1/cmr/m/it/10 Systems that are isometrically or isomor
-phically invariant
+
+[4]
+Overfull \hbox (15.3102pt too wide) in paragraph at lines 222--223
+[]\OT1/cmr/m/n/10 Formally, if we have variables $\OML/cmm/m/it/10 v[]; v[]; []
+ ; v[]$ \OT1/cmr/m/n/10 with dimensions, there exist $\OML/cmm/m/it/10 k$ \OT1/
+cmr/m/n/10 dimensionless groups $^^E[]\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 ^^E[]\
+OML/cmm/m/it/10 ; [] ; \OT1/cmr/m/n/10 ^^E[]$
  []
 
 
+Overfull \hbox (10.87196pt too wide) in paragraph at lines 240--241
+[]\OT1/cmr/m/n/10 Consider the category $\OMS/cmsy/m/n/10 C$ \OT1/cmr/m/n/10 wh
+ose objects are dimensioned variables and whose morphisms are dimensionally
+ []
 
-[4]
+
 
 [5]
 
 [6]
-Overfull \hbox (5.66284pt too wide) in paragraph at lines 361--362
-[]\OT1/cmr/bx/n/10 Proposition 9.2 \OT1/cmr/m/n/10 (Simplification Strategy Pro
-position)\OT1/cmr/bx/n/10 . []\OT1/cmr/m/it/10 To prevent overfitting due to di
-mensional redundancy,
- []
-
-
-Overfull \hbox (7.66225pt too wide) in paragraph at lines 384--385
-[]\OT1/cmr/m/n/10 In both cases, linear dependence among variables (features or
- dimension vectors) introduces redundancy.
+Overfull \hbox (5.85686pt too wide) in paragraph at lines 389--390
+[]\OT1/cmr/m/n/10 The dimensionless groups act as free generators that define h
+ow invariants are mapped to the dimensioned
  []
 
 
 
 [7]
-Overfull \hbox (7.06561pt too wide) in paragraph at lines 408--409
-[]\OT1/cmr/bx/n/10 Theorem 10.1 \OT1/cmr/m/n/10 (Hyperparameter Harmony Theorem
-)\OT1/cmr/bx/n/10 . []\OT1/cmr/m/it/10 Models sharing the same dimensionless hy
-perparameter
+Overfull \hbox (10.88774pt too wide) in paragraph at lines 407--408
+[]\OT1/cmr/bx/n/10 Theorem 7.1 \OT1/cmr/m/n/10 (Equivalence Enchantment Theorem
+)\OT1/cmr/bx/n/10 . []\OT1/cmr/m/it/10 Systems that are isometrically or isomor
+phically invariant
  []
 
 
-Overfull \hbox (5.35669pt too wide) in paragraph at lines 411--412
-[]\OT1/cmr/m/n/10 Dimensionless hyperparameter groups encapsulate the relative 
-influence of different training parameters
+Overfull \hbox (5.18109pt too wide) in paragraph at lines 424--425
+\OT1/cmr/m/n/10 drawing parallels with multicollinearity in machine learning. A
+dditionally, we have shown how the Buckingham
+ []
+
+
+Overfull \hbox (2.45892pt too wide) in paragraph at lines 424--425
+\OT1/cmr/m/n/10 including machine learning models. The framework provides a fou
+ndation for further exploration of categorical
  []
 
 
 
-[8] (Complete_Dimensionless_Groups_with_Expanded_Proofs_and_Discoveries.aux)
+[8] (v3.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-07-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 14672 strings out of 475834
- 306100 string characters out of 5777856
- 1944957 words of memory out of 5000000
- 37048 multiletter control sequences out of 15000+600000
- 568537 words of font info for 75 fonts, out of 8000000 for 9000
+ 14666 strings out of 475834
+ 304848 string characters out of 5777856
+ 1942957 words of memory out of 5000000
+ 37044 multiletter control sequences out of 15000+600000
+ 567918 words of font info for 73 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
- 116i,15n,121p,860b,1057s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,15n,121p,1019b,1057s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/MoDMAN200o/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcr
 m1000.pk></home/MoDMAN200o/.miktex/texmfs/install/fonts/type1/public/amsfonts/c
 m/cmbx10.pfb></home/MoDMAN200o/.miktex/texmfs/install/fonts/type1/public/amsfon
 ts/cm/cmbx12.pfb></home/MoDMAN200o/.miktex/texmfs/install/fonts/type1/public/am
 sfonts/cm/cmbx9.pfb></home/MoDMAN200o/.miktex/texmfs/install/fonts/type1/public
-/amsfonts/cm/cmmi10.pfb></home/MoDMAN200o/.miktex/texmfs/install/fonts/type1/pu
-blic/amsfonts/cm/cmmi5.pfb></home/MoDMAN200o/.miktex/texmfs/install/fonts/type1
-/public/amsfonts/cm/cmmi7.pfb></home/MoDMAN200o/.miktex/texmfs/install/fonts/ty
-pe1/public/amsfonts/cm/cmr10.pfb></home/MoDMAN200o/.miktex/texmfs/install/fonts
-/type1/public/amsfonts/cm/cmr17.pfb></home/MoDMAN200o/.miktex/texmfs/install/fo
-nts/type1/public/amsfonts/cm/cmr7.pfb></home/MoDMAN200o/.miktex/texmfs/install/
-fonts/type1/public/amsfonts/cm/cmr9.pfb></home/MoDMAN200o/.miktex/texmfs/instal
-l/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/MoDMAN200o/.miktex/texmfs/in
-stall/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/MoDMAN200o/.miktex/texmfs
-/install/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/MoDMAN200o/.miktex/te
-xmfs/install/fonts/type1/public/amsfonts/cm/cmti7.pfb></home/MoDMAN200o/.miktex
-/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Complete_Dimensionless_Groups_with_Expanded_Proofs_and_Discov
-eries.pdf (8 pages, 236348 bytes).
+/amsfonts/cm/cmex10.pfb></home/MoDMAN200o/.miktex/texmfs/install/fonts/type1/pu
+blic/amsfonts/cmextra/cmex7.pfb></home/MoDMAN200o/.miktex/texmfs/install/fonts/
+type1/public/amsfonts/cm/cmmi10.pfb></home/MoDMAN200o/.miktex/texmfs/install/fo
+nts/type1/public/amsfonts/cm/cmmi5.pfb></home/MoDMAN200o/.miktex/texmfs/install
+/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/MoDMAN200o/.miktex/texmfs/inst
+all/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/MoDMAN200o/.miktex/texmfs/i
+nstall/fonts/type1/public/amsfonts/cm/cmr17.pfb></home/MoDMAN200o/.miktex/texmf
+s/install/fonts/type1/public/amsfonts/cm/cmr5.pfb></home/MoDMAN200o/.miktex/tex
+mfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/MoDMAN200o/.miktex/t
+exmfs/install/fonts/type1/public/amsfonts/cm/cmr9.pfb></home/MoDMAN200o/.miktex
+/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/MoDMAN200o/.mi
+ktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/MoDMAN200o/
+.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/MoDMAN2
+00o/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti7.pfb></home/MoDM
+AN200o/.miktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on v3.pdf (8 pages, 260578 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
+ 127 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

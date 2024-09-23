@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.8)  22 SEP 2024 21:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.8)  23 SEP 2024 11:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./Complete_Dimensionless_Groups_with_Expanded_Proofs_and_Discoveries.tex
-(Complete_Dimensionless_Groups_with_Expanded_Proofs_and_Discoveries.tex
+**./v6.tex
+(v6.tex
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-07-20>
 (/home/MoDMAN200o/.miktex/texmfs/install/tex/latex/base/article.cls
@@ -495,15 +495,15 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \c@proposition=\count305
 \c@corollary=\count306
 \c@definition=\count307
+\c@example=\count308
 
 (/home/MoDMAN200o/.miktex/texmfs/install/tex/latex/l3backend/l3backend-pdftex.d
 ef
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count308
+\l__color_backend_stack_int=\count309
 \l__pdf_internal_box=\box65
-) (Complete_Dimensionless_Groups_with_Expanded_Proofs_and_Discoveries.aux)
-\openout1 = `Complete_Dimensionless_Groups_with_Expanded_Proofs_and_Discoveries
-.aux'.
+) (v6.aux)
+\openout1 = `v6.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
@@ -522,16 +522,16 @@ LaTeX Font Info:    ... okay on input line 19.
 
 (/home/MoDMAN200o/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count309
+\scratchcounter=\count310
 \scratchdimen=\dimen271
 \scratchbox=\box66
-\nofMPsegments=\count310
-\nofMParguments=\count311
+\nofMPsegments=\count311
+\nofMParguments=\count312
 \everyMPshowfont=\toks42
-\MPscratchCnt=\count312
+\MPscratchCnt=\count313
 \MPscratchDim=\dimen272
-\MPnumerator=\count313
-\makeMPintoPDFobject=\count314
+\MPnumerator=\count314
+\makeMPintoPDFobject=\count315
 \everyMPtoPDFconversion=\toks43
 )
 (/home/MoDMAN200o/.miktex/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.s
@@ -592,118 +592,258 @@ Overfull \hbox (0.14288pt too wide) in paragraph at lines 24--25
 sional analysis using display categories,
  []
 
-
-Overfull \hbox (9.71623pt too wide) in paragraph at lines 24--25
-\OT1/cmr/m/n/9 functors, and natural transformations. By introducing isometric 
-and isomorphic invariances of dimensionless
- []
-
-(Complete_Dimensionless_Groups_with_Expanded_Proofs_and_Discoveries.toc
+(v6.toc
 
 [1
 
-{/home/MoDMAN200o/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}])
+{/home/MoDMAN200o/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}]
+
+[2])
 \tf@toc=\write4
-\openout4 = `Complete_Dimensionless_Groups_with_Expanded_Proofs_and_Discoveries
-.toc'.
+\openout4 = `v6.toc'.
 
 
-Overfull \hbox (8.32056pt too wide) in paragraph at lines 62--63
-[]\OT1/cmr/bx/n/10 Definition 2.3 \OT1/cmr/m/n/10 (Natural Transformation Treas
-ure)\OT1/cmr/bx/n/10 . []\OT1/cmr/m/n/10 Given two functors $\OML/cmm/m/it/10 F
-; G \OT1/cmr/m/n/10 : \OMS/cmsy/m/n/10 C ! D$\OT1/cmr/m/n/10 , a \OT1/cmr/m/it/
-10 natural transformation
- []
-
-
-Overfull \hbox (8.48462pt too wide) in paragraph at lines 74--75
-[]\OT1/cmr/bx/n/10 Definition 2.4 \OT1/cmr/m/n/10 (Dimension Delight)\OT1/cmr/b
-x/n/10 . []\OT1/cmr/m/n/10 A \OT1/cmr/m/it/10 dimension \OT1/cmr/m/n/10 is a fu
-ndamental measure of a physical quantity, represented
- []
-
-
-
-[2]
 
 [3]
-Overfull \hbox (10.88774pt too wide) in paragraph at lines 181--182
-[]\OT1/cmr/bx/n/10 Theorem 6.1 \OT1/cmr/m/n/10 (Equivalence Enchantment Theorem
-)\OT1/cmr/bx/n/10 . []\OT1/cmr/m/it/10 Systems that are isometrically or isomor
-phically invariant
- []
-
-
 
 [4]
 
 [5]
+Overfull \hbox (1.69084pt too wide) in paragraph at lines 263--264
+[]\OT1/cmr/bx/n/10 Theorem 6.1 \OT1/cmr/m/n/10 (Golden Equivalence Classificati
+on Theorem)\OT1/cmr/bx/n/10 . []\OT1/cmr/m/it/10 Systems that are isometrically
+ or isomorphically
+ []
+
+
 
 [6]
-Overfull \hbox (5.66284pt too wide) in paragraph at lines 361--362
-[]\OT1/cmr/bx/n/10 Proposition 9.2 \OT1/cmr/m/n/10 (Simplification Strategy Pro
-position)\OT1/cmr/bx/n/10 . []\OT1/cmr/m/it/10 To prevent overfitting due to di
-mensional redundancy,
- []
-
-
-Overfull \hbox (7.66225pt too wide) in paragraph at lines 384--385
-[]\OT1/cmr/m/n/10 In both cases, linear dependence among variables (features or
- dimension vectors) introduces redundancy.
- []
-
-
 
 [7]
-Overfull \hbox (7.06561pt too wide) in paragraph at lines 408--409
+
+[8]
+
+[9]
+Overfull \hbox (1.66245pt too wide) in paragraph at lines 455--456
+[]\OT1/cmr/m/n/10 In the display category framework, we can represent chaotic s
+ystems by incorporating nonlinear morphisms
+ []
+
+
+
+[10]
+Overfull \hbox (2.50691pt too wide) in paragraph at lines 515--516
+[]\OT1/cmr/bx/n/10 Sensitive Dependence on Initial Conditions: \OT1/cmr/m/n/10 
+The nonlinear morphisms $\OML/cmm/m/it/10 f[]$ \OT1/cmr/m/n/10 amplify small di
+fferences
+ []
+
+
+Overfull \hbox (11.82841pt too wide) in paragraph at lines 556--557
+[]\OT1/cmr/bx/n/10 Infinite Complexity: \OT1/cmr/m/n/10 The infinite, non-repea
+ting sequence of morphisms reflects the inherent complexity
+ []
+
+
+
+[11]
+Overfull \hbox (16.19038pt too wide) in paragraph at lines 608--609
+[]\OT1/cmr/m/n/10 Model chaotic dynamics through nonlinear morphisms, capturing
+ sensitive dependence on initial conditions. 
+ []
+
+
+
+[12]
+
+[13]
+Overfull \hbox (3.05142pt too wide) in paragraph at lines 676--677
+\OT1/cmr/m/n/10 In statistical modeling, such as regression analysis, including
+ linearly dependent (or highly collinear) predictors
+ []
+
+
+Overfull \hbox (16.16257pt too wide) in paragraph at lines 703--704
+[]\OT1/cmr/m/n/10 By applying these strategies, we simplify the model, enhance 
+its generalizability, and maintain interpretability.
+ []
+
+
+
+[14]
+Overfull \hbox (7.1624pt too wide) in paragraph at lines 739--740
+\OT1/cmr/m/n/10 Let $^^H$ be a matrix whose columns represent the exponents of 
+the base variables that constitute the dimensionless
+ []
+
+
+Overfull \hbox (2.68655pt too wide) in paragraph at lines 745--746
+[]\OT1/cmr/m/n/10 where $\OML/cmm/m/it/10 v[]$ \OT1/cmr/m/n/10 are the base var
+iables with dimensions, and $\OML/cmm/m/it/10 a[] \OMS/cmsy/m/n/10 2 \U/msb/m/n
+/10 R$ \OT1/cmr/m/n/10 are the exponents that make $^^E[]$ dimensionless. 
+ []
+
+
+
+[15]
+Overfull \hbox (11.966pt too wide) in paragraph at lines 807--808
+[]\OT1/cmr/bx/n/10 Theorem 9.1 \OT1/cmr/m/n/10 (Goldrick's Nonlinear Feature Ge
+neration Theorem)\OT1/cmr/bx/n/10 . []\OT1/cmr/m/it/10 In the categorical frame
+work of dimensional
+ []
+
+
+Overfull \hbox (7.18518pt too wide) in paragraph at lines 807--808
+\OT1/cmr/m/it/10 form a valid and dimensionally consistent basis for machine le
+arning models, preserving physical interpretability
+ []
+
+
+Overfull \hbox (12.19183pt too wide) in paragraph at lines 816--817
+[]\OT1/cmr/bx/n/10 Preserving Physical Interpretability: \OT1/cmr/m/n/10 Each c
+andidate function corresponds to a physically meaningful
+ []
+
+
+Overfull \hbox (13.6775pt too wide) in paragraph at lines 829--830
+[]\OT1/cmr/m/n/10 The functor $\OML/cmm/m/it/10 G$ \OT1/cmr/m/n/10 maps objects
+ (Pi groups) in $\OMS/cmsy/m/n/10 P$ \OT1/cmr/m/n/10 to objects (functions) in 
+$\OMS/cmsy/m/n/10 F$ \OT1/cmr/m/n/10 and morphisms (transformations)
+ []
+
+
+
+[16]
+
+[17]
+Overfull \hbox (6.738pt too wide) in paragraph at lines 898--899
+[]\OT1/cmr/bx/n/10 Enhanced Predictive Power: \OT1/cmr/m/n/10 Captures complex 
+interactions and nonlinearities, potentially improving
+ []
+
+
+Overfull \hbox (7.34624pt too wide) in paragraph at lines 899--900
+[]\OT1/cmr/bx/n/10 Dimensional Consistency: \OT1/cmr/m/n/10 Ensures that all ge
+nerated functions adhere to the principles of dimensional
+ []
+
+
+Overfull \hbox (11.23666pt too wide) in paragraph at lines 904--905
+\OT1/cmr/m/n/10 variables that correlate with the target outcome. By focusing o
+n dimensionless groups and their transformations,
+ []
+
+
+Overfull \hbox (7.06561pt too wide) in paragraph at lines 935--936
 []\OT1/cmr/bx/n/10 Theorem 10.1 \OT1/cmr/m/n/10 (Hyperparameter Harmony Theorem
 )\OT1/cmr/bx/n/10 . []\OT1/cmr/m/it/10 Models sharing the same dimensionless hy
 perparameter
  []
 
 
-Overfull \hbox (5.35669pt too wide) in paragraph at lines 411--412
-[]\OT1/cmr/m/n/10 Dimensionless hyperparameter groups encapsulate the relative 
-influence of different training parameters
+
+[18]
+Overfull \hbox (1.92738pt too wide) in paragraph at lines 965--966
+[]\OT1/cmr/bx/n/10 Isometric: \OT1/cmr/m/n/10 Preserves the quantitative relati
+onships, such as weight magnitudes and activation patterns,
+ []
+
+
+Overfull \hbox (15.3102pt too wide) in paragraph at lines 981--982
+[]\OT1/cmr/m/n/10 Formally, if we have variables $\OML/cmm/m/it/10 v[]; v[]; []
+ ; v[]$ \OT1/cmr/m/n/10 with dimensions, there exist $\OML/cmm/m/it/10 k$ \OT1/
+cmr/m/n/10 dimensionless groups $^^E[]\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 ^^E[]\
+OML/cmm/m/it/10 ; [] ; \OT1/cmr/m/n/10 ^^E[]$
  []
 
 
 
-[8] (Complete_Dimensionless_Groups_with_Expanded_Proofs_and_Discoveries.aux)
+[19]
+Overfull \hbox (10.87196pt too wide) in paragraph at lines 999--1000
+[]\OT1/cmr/m/n/10 Consider the category $\OMS/cmsy/m/n/10 C$ \OT1/cmr/m/n/10 wh
+ose objects are dimensioned variables and whose morphisms are dimensionally
+ []
+
+
+
+[20]
+Overfull \hbox (5.85686pt too wide) in paragraph at lines 1057--1058
+[]\OT1/cmr/m/n/10 The dimensionless groups act as free generators that define h
+ow invariants are mapped to the dimensioned
+ []
+
+
+Overfull \hbox (2.2886pt too wide) in paragraph at lines 1099--1100
+[]\OT1/cmr/m/n/10 Let $\OMS/cmsy/m/n/10 C$ \OT1/cmr/m/n/10 be the category wher
+e objects are sets of dimensioned variables, and morphisms are dimensionally
+ []
+
+
+
+[21]
+Overfull \hbox (0.75706pt too wide) in paragraph at lines 1114--1115
+[]\OT1/cmr/bx/n/10 Proposition 12.1 \OT1/cmr/m/n/10 (Universality of Physical L
+aws)\OT1/cmr/bx/n/10 . []\OT1/cmr/m/it/10 Physical laws that are expressed in t
+erms of dimensionless
+ []
+
+
+Overfull \hbox (16.4126pt too wide) in paragraph at lines 1129--1130
+[]\OT1/cmr/m/n/10 Recognize that any dimensionally consistent function factors 
+through the dimensionless groups, highlighting
+ []
+
+
+Overfull \hbox (13.15341pt too wide) in paragraph at lines 1135--1136
+\OT1/cmr/m/n/10 functors, natural transformations, and universal properties. By
+ introducing isometric and isomorphic invariances
+ []
+
+
+
+[22] (v6.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-07-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 14672 strings out of 475834
- 306100 string characters out of 5777856
+ 14694 strings out of 475834
+ 305247 string characters out of 5777856
  1944957 words of memory out of 5000000
- 37048 multiletter control sequences out of 15000+600000
- 568537 words of font info for 75 fonts, out of 8000000 for 9000
+ 37064 multiletter control sequences out of 15000+600000
+ 570367 words of font info for 81 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
- 116i,15n,121p,860b,1057s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,15n,121p,1387b,1057s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/MoDMAN200o/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcr
 m1000.pk></home/MoDMAN200o/.miktex/texmfs/install/fonts/type1/public/amsfonts/c
 m/cmbx10.pfb></home/MoDMAN200o/.miktex/texmfs/install/fonts/type1/public/amsfon
 ts/cm/cmbx12.pfb></home/MoDMAN200o/.miktex/texmfs/install/fonts/type1/public/am
-sfonts/cm/cmbx9.pfb></home/MoDMAN200o/.miktex/texmfs/install/fonts/type1/public
-/amsfonts/cm/cmmi10.pfb></home/MoDMAN200o/.miktex/texmfs/install/fonts/type1/pu
-blic/amsfonts/cm/cmmi5.pfb></home/MoDMAN200o/.miktex/texmfs/install/fonts/type1
-/public/amsfonts/cm/cmmi7.pfb></home/MoDMAN200o/.miktex/texmfs/install/fonts/ty
-pe1/public/amsfonts/cm/cmr10.pfb></home/MoDMAN200o/.miktex/texmfs/install/fonts
-/type1/public/amsfonts/cm/cmr17.pfb></home/MoDMAN200o/.miktex/texmfs/install/fo
-nts/type1/public/amsfonts/cm/cmr7.pfb></home/MoDMAN200o/.miktex/texmfs/install/
-fonts/type1/public/amsfonts/cm/cmr9.pfb></home/MoDMAN200o/.miktex/texmfs/instal
-l/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/MoDMAN200o/.miktex/texmfs/in
-stall/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/MoDMAN200o/.miktex/texmfs
-/install/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/MoDMAN200o/.miktex/te
-xmfs/install/fonts/type1/public/amsfonts/cm/cmti7.pfb></home/MoDMAN200o/.miktex
-/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Complete_Dimensionless_Groups_with_Expanded_Proofs_and_Discov
-eries.pdf (8 pages, 236348 bytes).
+sfonts/cm/cmbx7.pfb></home/MoDMAN200o/.miktex/texmfs/install/fonts/type1/public
+/amsfonts/cm/cmbx9.pfb></home/MoDMAN200o/.miktex/texmfs/install/fonts/type1/pub
+lic/amsfonts/cm/cmex10.pfb></home/MoDMAN200o/.miktex/texmfs/install/fonts/type1
+/public/amsfonts/cmextra/cmex7.pfb></home/MoDMAN200o/.miktex/texmfs/install/fon
+ts/type1/public/amsfonts/cm/cmmi10.pfb></home/MoDMAN200o/.miktex/texmfs/install
+/fonts/type1/public/amsfonts/cm/cmmi5.pfb></home/MoDMAN200o/.miktex/texmfs/inst
+all/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/MoDMAN200o/.miktex/texmfs/i
+nstall/fonts/type1/public/amsfonts/cm/cmmib10.pfb></home/MoDMAN200o/.miktex/tex
+mfs/install/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></home/MoDMAN200o/.m
+iktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/MoDMAN200o
+/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb></home/MoDMAN2
+00o/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr5.pfb></home/MoDMA
+N200o/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/MoD
+MAN200o/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr9.pfb></home/M
+oDMAN200o/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></ho
+me/MoDMAN200o/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy5.pfb><
+/home/MoDMAN200o/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pf
+b></home/MoDMAN200o/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti1
+0.pfb></home/MoDMAN200o/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/c
+mti7.pfb></home/MoDMAN200o/.miktex/texmfs/install/fonts/type1/public/amsfonts/s
+ymbols/msam5.pfb></home/MoDMAN200o/.miktex/texmfs/install/fonts/type1/public/am
+sfonts/symbols/msbm10.pfb>
+Output written on v6.pdf (22 pages, 378525 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
+ 196 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

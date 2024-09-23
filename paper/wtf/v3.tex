@@ -1,0 +1,426 @@
+\documentclass{article}
+\usepackage{amsmath, amsthm, amsfonts, amssymb}
+\usepackage{tikz-cd}
+\usepackage{geometry}
+\geometry{margin=1in}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\title{Categorical Framework for Dimensional Analysis and System Classification}
+\author{}
+\date{}
+
+\begin{document}
+	
+	\maketitle
+	
+	\begin{abstract}
+		This paper develops a categorical framework to formalize dimensional analysis using display categories, functors, and natural transformations. By introducing isometric and isomorphic invariances of dimensionless groups, we establish a method to classify physical systems into equivalence classes based on their behaviors. This framework unifies different physical domains and provides a systematic approach to analyze and predict system behaviors across various fields, including applications to machine learning models. We also explore the implications of linear dependence in dimension vector spaces on overfitting in modeling and discuss how the Buckingham Pi theorem fits into this framework as a special case involving free object generators.
+	\end{abstract}
+	
+	\tableofcontents
+	
+	\section{Introduction}
+	
+	Dimensional analysis is a fundamental tool in physics and engineering, providing insight into the relationships between physical quantities and allowing for the formation of dimensionless groups that characterize system behaviors. In this paper, we extend the traditional approach by applying category theory to dimensional analysis, introducing \emph{display categories}, functors, and natural transformations to create a formal framework for classifying and comparing physical systems. We further explore applications of this framework in machine learning models, discuss how linear dependence in dimension vector spaces relates to overfitting in modeling, and examine how the Buckingham Pi theorem operates within this categorical context.
+	
+	\section{Preliminaries}
+	
+	\subsection{Basic Definitions in Category Theory}
+	
+	\begin{definition}[Category Concepts Carnival]
+		A \emph{category} $\mathcal{C}$ consists of:
+		\begin{itemize}
+			\item A class of \emph{objects} $\operatorname{Ob}(\mathcal{C})$.
+			\item For every pair of objects $A, B \in \operatorname{Ob}(\mathcal{C})$, a set of \emph{morphisms} (or arrows) $\operatorname{Hom}_{\mathcal{C}}(A, B)$.
+			\item For every triple of objects $A, B, C \in \operatorname{Ob}(\mathcal{C})$, a composition law $\circ: \operatorname{Hom}_{\mathcal{C}}(B, C) \times \operatorname{Hom}_{\mathcal{C}}(A, B) \rightarrow \operatorname{Hom}_{\mathcal{C}}(A, C)$.
+			\item For every object $A \in \operatorname{Ob}(\mathcal{C})$, an identity morphism $\operatorname{id}_A \in \operatorname{Hom}_{\mathcal{C}}(A, A)$.
+		\end{itemize}
+		These must satisfy the associativity and identity axioms.
+	\end{definition}
+	
+	\begin{definition}[Fantastic Functor]
+		A \emph{functor} $F: \mathcal{C} \rightarrow \mathcal{D}$ between categories $\mathcal{C}$ and $\mathcal{D}$ is a mapping that:
+		\begin{itemize}
+			\item Assigns to each object $A \in \operatorname{Ob}(\mathcal{C})$ an object $F(A) \in \operatorname{Ob}(\mathcal{D})$.
+			\item Assigns to each morphism $f: A \rightarrow B$ in $\mathcal{C}$ a morphism $F(f): F(A) \rightarrow F(B)$ in $\mathcal{D}$.
+		\end{itemize}
+		Such that:
+		\begin{itemize}
+			\item $F(\operatorname{id}_A) = \operatorname{id}_{F(A)}$ for all $A \in \operatorname{Ob}(\mathcal{C})$.
+			\item $F(g \circ f) = F(g) \circ F(f)$ for all composable morphisms $f, g$ in $\mathcal{C}$.
+		\end{itemize}
+	\end{definition}
+	
+	\begin{definition}[Natural Transformation Treasure]
+		Given two functors $F, G: \mathcal{C} \rightarrow \mathcal{D}$, a \emph{natural transformation} $\eta: F \Rightarrow G$ assigns to each object $A \in \operatorname{Ob}(\mathcal{C})$ a morphism $\eta_A: F(A) \rightarrow G(A)$ in $\mathcal{D}$, such that for every morphism $f: A \rightarrow B$ in $\mathcal{C}$, the following diagram commutes:
+		\[
+		\begin{tikzcd}
+			F(A) \arrow[r, "F(f)"] \arrow[d, "\eta_A"'] & F(B) \arrow[d, "\eta_B"] \\
+			G(A) \arrow[r, "G(f)"'] & G(B)
+		\end{tikzcd}
+		\]
+	\end{definition}
+	
+	\subsection{Dimensional Analysis and Dimensionless Groups}
+	
+	\begin{definition}[Dimension Delight]
+		A \emph{dimension} is a fundamental measure of a physical quantity, represented symbolically (e.g., mass $[M]$, length $[L]$, time $[T]$).
+		
+		A \emph{dimensioned quantity} is a physical variable associated with a combination of dimensions, expressed as $[M]^a[L]^b[T]^c$, where $a, b, c \in \mathbb{R}$.
+	\end{definition}
+	
+	\begin{definition}[Dimensionless Dazzler]
+		A \emph{dimensionless group} is a combination of physical variables and constants that results in a quantity without units, i.e., all dimensions cancel out.
+	\end{definition}
+	
+	\subsection{Dimension Vector Spaces}
+	
+	\begin{definition}[Vector Space Voyage]
+		The \emph{dimension vector space} $\mathcal{V}_D$ is a real vector space formed by the exponents of the fundamental dimensions. Each dimensioned quantity corresponds to a vector in $\mathcal{V}_D$.
+	\end{definition}
+	
+	\section{Display Categories and Dimensional Systems}
+	
+	\subsection{Display Categories}
+	
+	\begin{definition}[Display Dynamo]
+		A \emph{display category} $\mathcal{V}$ over a base category $\mathcal{D}$ is a category where:
+		\begin{itemize}
+			\item Objects of $\mathcal{V}$ are variables associated with dimensions in $\mathcal{D}$.
+			\item Morphisms in $\mathcal{V}$ represent relationships (e.g., equations, transformations) between these variables.
+			\item There is a functor $p: \mathcal{V} \rightarrow \mathcal{D}$ called the \emph{display functor}, which maps each variable to its associated dimension.
+		\end{itemize}
+	\end{definition}
+	
+	\subsection{Base Category of Dimensions}
+	
+	Let $\mathcal{D}$ be the base category where:
+	\begin{itemize}
+		\item $\operatorname{Ob}(\mathcal{D})$ consists of fundamental dimensions $[M], [L], [T], \dots$.
+		\item Morphisms in $\mathcal{D}$ represent dimension transformations (e.g., scaling, combination).
+	\end{itemize}
+	
+	\subsection{Variables and Morphisms}
+	
+	In the display category $\mathcal{V}$:
+	\begin{itemize}
+		\item Objects are physical variables (e.g., mass $m$, velocity $v$, force $F$) with associated dimensions via the functor $p$.
+		\item Morphisms represent physical laws or relationships between variables (e.g., $F = m a$, $v = \dfrac{dx}{dt}$).
+	\end{itemize}
+	
+	\section{Functors and Natural Transformations in Dimensional Systems}
+	
+	\subsection{Unit Systems as Functors}
+	
+	Let $\mathcal{U}_{\text{SI}}$ and $\mathcal{U}_{\text{Imperial}}$ be categories representing the SI and Imperial unit systems, respectively.
+	
+	Define functors:
+	\begin{align*}
+		F_{\text{SI}} &: \mathcal{D} \rightarrow \mathcal{U}_{\text{SI}}, \\
+		F_{\text{Imperial}} &: \mathcal{D} \rightarrow \mathcal{U}_{\text{Imperial}}.
+	\end{align*}
+	
+	These functors map dimensions to units in each system.
+	
+	\subsection{Natural Transformations as Unit Conversions}
+	
+	\begin{definition}[Conversion Conjurer]
+		A natural transformation $\eta: F_{\text{SI}} \Rightarrow F_{\text{Imperial}}$ represents unit conversions between the SI and Imperial systems.
+		
+		For each dimension $[D] \in \operatorname{Ob}(\mathcal{D})$, $\eta_{[D]}: F_{\text{SI}}([D]) \rightarrow F_{\text{Imperial}}([D])$ is the conversion factor between units.
+	\end{definition}
+	
+	\subsection{Invariance of Dimensionless Groups}
+	
+	\begin{theorem}[Invariant Invincibility Theorem]
+		Let $\Pi$ be a dimensionless group formed from variables in $\mathcal{V}$ associated with dimensions in $\mathcal{D}$. Then, under the natural transformation $\eta: F_{\text{SI}} \Rightarrow F_{\text{Imperial}}$, $\Pi$ remains invariant.
+		
+		\begin{proof}
+			Since $\Pi$ is dimensionless, it is constructed such that all dimensional units cancel out. Under the natural transformation $\eta$, each variable transforms according to unit conversion factors, but the ratios and products in $\Pi$ ensure that these factors cancel. Therefore, $\Pi$ is invariant under $\eta$.
+		\end{proof}
+	\end{theorem}
+	
+	\section{Isometric and Isomorphic Invariances}
+	
+	\subsection{Isometric Invariance}
+	
+	\begin{definition}[Isometric Illusion]
+		An \emph{isometric transformation} in this context is a mapping between two systems that preserves quantitative relationships, such as ratios or magnitudes of variables.
+		
+		Formally, consider two systems $S_1$ and $S_2$ with variable sets $\{v_i\}$ and $\{v'_i\}$, respectively. An isometric transformation $\phi: S_1 \rightarrow S_2$ satisfies:
+		\[
+		\phi(v_i) = k v_i,
+		\]
+		where $k$ is a constant scaling factor, and the relationships between variables in $S_1$ are preserved in $S_2$.
+		
+		Two systems are \emph{isometrically invariant} if there exists an isometric transformation between them that preserves these quantitative relationships.
+	\end{definition}
+	
+	\begin{theorem}[Isometric Invariance Preservation]
+		If two systems $S_1$ and $S_2$ are related by an isometric transformation $\phi$, then any dimensionless groups formed from variables in $S_1$ are invariant under $\phi$.
+		
+		\begin{proof}
+			Let $\Pi$ be a dimensionless group formed from variables in $S_1$:
+			\[
+			\Pi = \prod_{i=1}^n v_i^{\alpha_i},
+			\]
+			where $\alpha_i \in \mathbb{R}$, and the product results in a dimensionless quantity.
+			
+			Applying the isometric transformation $\phi$:
+			\[
+			\phi(\Pi) = \prod_{i=1}^n \phi(v_i)^{\alpha_i} = \prod_{i=1}^n (k v_i)^{\alpha_i} = k^{\sum_{i=1}^n \alpha_i} \Pi.
+			\]
+			
+			Since $\Pi$ is dimensionless, the exponents of the dimensions sum to zero, so $\sum_{i=1}^n \alpha_i [D_i] = 0$. Therefore, the scaling factor $k$ raised to the power of zero is one:
+			\[
+			k^{\sum_{i=1}^n \alpha_i} = k^0 = 1.
+			\]
+			Thus:
+			\[
+			\phi(\Pi) = \Pi.
+			\]
+			Therefore, dimensionless groups are invariant under isometric transformations.
+		\end{proof}
+	\end{theorem}
+	
+	\subsection{Isomorphic Invariance}
+	
+	\begin{definition}[Isomorphism Intrigue]
+		An \emph{isomorphism} between two categories $\mathcal{C}$ and $\mathcal{D}$ is a functor $F: \mathcal{C} \rightarrow \mathcal{D}$ that is invertible, i.e., there exists a functor $G: \mathcal{D} \rightarrow \mathcal{C}$ such that $G \circ F = \operatorname{id}_{\mathcal{C}}$ and $F \circ G = \operatorname{id}_{\mathcal{D}}$.
+		
+		Two systems are \emph{isomorphically invariant} if their categories are isomorphic, preserving the structural relationships between variables and equations.
+	\end{definition}
+	
+	\begin{theorem}[Isomorphic Invariance Preservation]
+		If two systems $S_1$ and $S_2$ have categories $\mathcal{C}_1$ and $\mathcal{C}_2$ that are isomorphic via a functor $F: \mathcal{C}_1 \rightarrow \mathcal{C}_2$, then the structural relationships (morphisms) in $S_1$ are preserved in $S_2$.
+		
+		\begin{proof}
+			Since $F$ is an isomorphism, it maps objects and morphisms in $\mathcal{C}_1$ to objects and morphisms in $\mathcal{C}_2$ such that the categorical structure is preserved.
+			
+			For any objects $A$, $B$ in $\mathcal{C}_1$, and any morphism $f: A \rightarrow B$, $F(f): F(A) \rightarrow F(B)$ in $\mathcal{C}_2$.
+			
+			Because $G \circ F = \operatorname{id}_{\mathcal{C}_1}$ and $F \circ G = \operatorname{id}_{\mathcal{D}}$, $F$ is invertible, ensuring that the structural relationships are fully preserved.
+			
+			Therefore, the equations and relationships in $S_1$ are mapped to equivalent equations and relationships in $S_2$, preserving the system's structure.
+		\end{proof}
+	\end{theorem}
+	
+	\section{Buckingham Pi Theorem and Free Object Generators}
+	
+	\subsection{Buckingham Pi Theorem in the Categorical Framework}
+	
+	\begin{definition}[Buckingham Pi Phenomenon]
+		The \emph{Buckingham Pi theorem} states that any physically meaningful equation involving a certain number $n$ of physical variables can be equivalently rewritten as an equation involving a set of $k = n - r$ dimensionless parameters, where $r$ is the rank of the dimensional matrix formed by the dimensions of the variables.
+		
+		Formally, if we have variables $v_1, v_2, \dots, v_n$ with dimensions, there exist $k$ dimensionless groups $\Pi_1, \Pi_2, \dots, \Pi_k$ such that:
+		\[
+		f(v_1, v_2, \dots, v_n) = 0 \quad \iff \quad \phi(\Pi_1, \Pi_2, \dots, \Pi_k) = 0.
+		\]
+	\end{definition}
+	
+	\subsection{Dimensionless Groups as Free Objects}
+	
+	\begin{definition}[Free Object Generator]
+		In category theory, a \emph{free object} on an object $X$ in a category $\mathcal{C}$ is an object $F(X)$ together with a morphism $\eta_X: X \rightarrow F(X)$ that satisfies a universal property.
+		
+		In the context of dimensional analysis, the process of forming dimensionless groups can be viewed as generating free objects in a category of dimensionless quantities.
+	\end{definition}
+	
+	\begin{theorem}[Buckingham Pi as Free Object Theorem]
+		The Buckingham Pi theorem can be interpreted as constructing a free object in the category of dimensionless quantities, generated by the dimensioned variables subject to dimensional invariance.
+		
+		\begin{proof}
+			Consider the category $\mathcal{C}$ whose objects are dimensioned variables and whose morphisms are dimensionally consistent functions between them. The dimensionless groups $\Pi_i$ are constructed by taking products of powers of the original variables:
+			\[
+			\Pi_i = \prod_{j=1}^n v_j^{a_{ij}},
+			\]
+			where the exponents $a_{ij}$ are determined by solving the dimensional homogeneity equations.
+			
+			This process can be seen as generating free objects in a category $\mathcal{D}$ of dimensionless quantities, where the $\Pi_i$ are the free generators. The mapping from the original variables to the dimensionless groups satisfies a universal property: any dimensionally consistent relationship between the original variables factors uniquely through the dimensionless groups.
+			
+			Therefore, the Buckingham Pi theorem constructs free objects on the set of dimensioned variables, capturing all possible dimensionless invariants derived from them.
+		\end{proof}
+	\end{theorem}
+	
+	\subsection{Application to Drag Force and Reynolds Number}
+	
+	\begin{definition}[Drag Force Dynamics]
+		Consider the problem of determining the drag force $F_D$ on an object moving through a fluid. The variables involved are:
+		\begin{itemize}
+			\item $F_D$: Drag force ($[M][L][T]^{-2}$).
+			\item $\rho$: Fluid density ($[M][L]^{-3}$).
+			\item $v$: Velocity of the object relative to the fluid ($[L][T]^{-1}$).
+			\item $L$: Characteristic length (e.g., diameter) of the object ($[L]$).
+			\item $\mu$: Dynamic viscosity of the fluid ($[M][L]^{-1}[T]^{-1}$).
+		\end{itemize}
+	\end{definition}
+	
+	\begin{theorem}[Drag Force Functionality Theorem]
+		Using the Buckingham Pi theorem, we can express the drag force $F_D$ as a function of the Reynolds number $\operatorname{Re}$:
+		\[
+		F_D = \rho v^2 L^2 \cdot \phi(\operatorname{Re}),
+		\]
+		where the Reynolds number is defined as:
+		\[
+		\operatorname{Re} = \dfrac{\rho v L}{\mu}.
+		\]
+		
+		\begin{proof}
+			We start with the variables $F_D$, $\rho$, $v$, $L$, and $\mu$, which involve $n = 5$ variables and $r = 3$ fundamental dimensions ($[M]$, $[L]$, $[T]$).
+			
+			According to the Buckingham Pi theorem, the number of dimensionless groups is $k = n - r = 5 - 3 = 2$. We need to construct two dimensionless groups.
+			
+			We choose repeating variables $\rho$, $v$, and $L$ because they collectively include all fundamental dimensions and are dimensionally independent.
+			
+			We express the dimensionless groups as:
+			\[
+			\Pi_1 = F_D \cdot \rho^a v^b L^c, \\
+			\Pi_2 = \mu \cdot \rho^d v^e L^f.
+			\]
+			
+			Solving for the exponents to ensure dimensional homogeneity:
+			
+			For $\Pi_1$:
+			\[
+			[F_D][\rho]^a [v]^b [L]^c = [M]^0 [L]^0 [T]^0.
+			\]
+			
+			Substituting dimensions:
+			\[
+			[M][L][T]^{-2} \cdot [M]^{a}[L]^{-3a} \cdot [L]^{b}[T]^{-b} \cdot [L]^c = [M]^0 [L]^0 [T]^0.
+			\]
+			
+			Collecting exponents:
+			\[
+			[M]^{1 + a} [L]^{1 - 3a + b + c} [T]^{-2 - b} = [M]^0 [L]^0 [T]^0.
+			\]
+			
+			Setting exponents to zero:
+			\begin{align*}
+				1 + a &= 0 \implies a = -1, \\
+				1 - 3a + b + c &= 0 \implies 1 - 3(-1) + b + c = 0 \implies b + c = -4, \\
+				-2 - b &= 0 \implies b = -2.
+			\end{align*}
+			
+			Thus, $b = -2$, and $c = -4 - b = -4 - (-2) = -2$.
+			
+			Therefore:
+			\[
+			\Pi_1 = F_D \cdot \rho^{-1} v^{-2} L^{-2} = \dfrac{F_D}{\rho v^2 L^2}.
+			\]
+			
+			Similarly for $\Pi_2$:
+			\[
+			[\mu][\rho]^d [v]^e [L]^f = [M]^0 [L]^0 [T]^0.
+			\]
+			
+			Substituting dimensions:
+			\[
+			[M][L]^{-1}[T]^{-1} \cdot [M]^{d}[L]^{-3d} \cdot [L]^{e}[T]^{-e} \cdot [L]^f = [M]^0 [L]^0 [T]^0.
+			\]
+			
+			Collecting exponents:
+			\[
+			[M]^{1 + d} [L]^{-1 - 3d + e + f} [T]^{-1 - e} = [M]^0 [L]^0 [T]^0.
+			\]
+			
+			Setting exponents to zero:
+			\begin{align*}
+				1 + d &= 0 \implies d = -1, \\
+				-1 - 3d + e + f &= 0 \implies -1 - 3(-1) + e + f = 0 \implies e + f = -2, \\
+				-1 - e &= 0 \implies e = -1.
+			\end{align*}
+			
+			Thus, $e = -1$, and $f = -2 - e = -2 - (-1) = -1$.
+			
+			Therefore:
+			\[
+			\Pi_2 = \mu \cdot \rho^{-1} v^{-1} L^{-1} = \dfrac{\mu}{\rho v L} = \operatorname{Re}^{-1}.
+			\]
+			
+			Hence, the two dimensionless groups are:
+			\[
+			\Pi_1 = \dfrac{F_D}{\rho v^2 L^2}, \quad \Pi_2 = \dfrac{\mu}{\rho v L} = \operatorname{Re}^{-1}.
+			\]
+			
+			Thus, the relationship between the drag force and the Reynolds number is:
+			\[
+			\Pi_1 = \phi(\Pi_2) \implies \dfrac{F_D}{\rho v^2 L^2} = \phi\left( \dfrac{\mu}{\rho v L} \right).
+			\]
+			
+			Rewriting:
+			\[
+			F_D = \rho v^2 L^2 \cdot \phi\left( \dfrac{\rho v L}{\mu} \right) = \rho v^2 L^2 \cdot \phi(\operatorname{Re}).
+			\]
+			
+			This demonstrates that the drag force is a function of the Reynolds number, with $\rho v^2 L^2$ providing the scaling factor, and $\phi(\operatorname{Re})$ capturing the dependency on the Reynolds number.
+			
+		\end{proof}
+	\end{theorem}
+	
+	\subsection{Buckingham Pi as a Simplification}
+	
+	In this example, the Buckingham Pi theorem reduces a complex relationship involving five variables to a simpler relationship involving only one dimensionless group (since $\Pi_1$ is expressed in terms of $\Pi_2$). This can be viewed as a special case where the free object generator produces a mapping from the invariants (dimensionless groups) to the dimensioned variables, effectively simplifying the problem.
+	
+	\begin{proposition}[Simplification via Free Object Generator]
+		The Buckingham Pi theorem acts as a free object generator on one object (the dimensionless group), providing a unique mapping from the invariant to the original variables, thereby simplifying the functional relationship.
+		
+		\begin{proof}
+			By generating the dimensionless group $\Pi_2 = \operatorname{Re}^{-1}$, we reduce the dependency of the drag force on multiple variables to a single functional dependency on $\operatorname{Re}$. The free object generator constructs $\Pi_2$ freely from the dimensioned variables while satisfying dimensional homogeneity.
+			
+			The function $\phi(\operatorname{Re})$ encapsulates all the complex interactions between the original variables within a single argument. This demonstrates how the Buckingham Pi theorem simplifies the problem by creating a free object (dimensionless group) that serves as the sole variable in the functional relationship.
+		\end{proof}
+	\end{proposition}
+	
+	\subsection{Implications in the Categorical Framework}
+	
+	Within our categorical framework, the Buckingham Pi theorem's role as a free object generator highlights how dimensionless groups serve as universal mappings that capture the essence of physical relationships. By interpreting the theorem in this way, we see that:
+	
+	\begin{itemize}
+		\item The dimensionless groups are objects in a category of invariants.
+		\item The mapping from dimensioned variables to dimensionless groups is a functorial process that preserves the structure of the relationships.
+		\item The dimensionless groups act as free generators that define how invariants are mapped to the dimensioned variables.
+	\end{itemize}
+	
+	This perspective reinforces the power of dimensional analysis within the categorical framework and illustrates how the Buckingham Pi theorem provides a systematic method for simplifying complex physical problems.
+	
+	\section{Equivalence Classes via Dimensionless Groups}
+	
+	\subsection{Classification of Systems}
+	
+	\begin{definition}[Equivalence Ensemble]
+		An \emph{equivalence class} of systems is a set of systems that share the same dimensionless groups and exhibit similar behaviors under corresponding conditions.
+		
+		We denote an equivalence class $\mathcal{E}_\Pi$ for systems sharing a dimensionless group $\Pi$.
+	\end{definition}
+	
+	\subsection{Formation of Equivalence Classes}
+	
+	\begin{theorem}[Equivalence Enchantment Theorem]
+		Systems that are isometrically or isomorphically invariant under transformations preserving their dimensionless groups belong to the same equivalence class $\mathcal{E}_\Pi$.
+		
+		\begin{proof}
+			Let systems $S_1$ and $S_2$ have categories $\mathcal{C}_1$ and $\mathcal{C}_2$, respectively, with associated dimensionless groups $\Pi_1$ and $\Pi_2$.
+			
+			Suppose there exists:
+			\begin{itemize}
+				\item An isometric transformation $\phi: S_1 \rightarrow S_2$ preserving quantitative relationships.
+				\item An isomorphism $F: \mathcal{C}_1 \rightarrow \mathcal{C}_2$ preserving structural relationships.
+			\end{itemize}
+			
+			Since $\phi$ and $F$ preserve the dimensionless groups (i.e., $\Pi_1 = \Pi_2$), and the systems exhibit similar behaviors under these transformations, they belong to the same equivalence class $\mathcal{E}_\Pi$.
+		\end{proof}
+	\end{theorem}
+	
+	\section{Conclusion}
+	
+	We have developed a categorical framework that formalizes dimensional analysis using display categories, functors, and natural transformations. By introducing isometric and isomorphic invariances of dimensionless groups, we can classify physical systems into equivalence classes based on their behaviors. We have explored how linear dependence in dimension vector spaces can lead to overfitting due to dimensional redundancy, drawing parallels with multicollinearity in machine learning. Additionally, we have shown how the Buckingham Pi theorem operates within this framework as a special case involving free object generators, simplifying complex relationships by mapping invariants to dimensioned variables. This approach unifies different physical domains and enhances our ability to analyze and predict system behaviors across various fields, including machine learning models. The framework provides a foundation for further exploration of categorical structures in complex systems.
+	
+\end{document}
