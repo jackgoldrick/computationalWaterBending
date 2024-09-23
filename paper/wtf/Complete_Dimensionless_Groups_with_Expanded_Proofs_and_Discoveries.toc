@@ -1,0 +1,36 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{}%
+\contentsline {section}{\numberline {2}Preliminaries}{2}{}%
+\contentsline {subsection}{\numberline {2.1}Basic Definitions in Category Theory}{2}{}%
+\contentsline {subsection}{\numberline {2.2}Dimensional Analysis and Dimensionless Groups}{3}{}%
+\contentsline {subsection}{\numberline {2.3}Dimension Vector Spaces}{3}{}%
+\contentsline {section}{\numberline {3}Display Categories and Dimensional Systems}{3}{}%
+\contentsline {subsection}{\numberline {3.1}Display Categories}{3}{}%
+\contentsline {subsection}{\numberline {3.2}Base Category of Dimensions}{3}{}%
+\contentsline {subsection}{\numberline {3.3}Variables and Morphisms}{3}{}%
+\contentsline {section}{\numberline {4}Functors and Natural Transformations in Dimensional Systems}{3}{}%
+\contentsline {subsection}{\numberline {4.1}Unit Systems as Functors}{3}{}%
+\contentsline {subsection}{\numberline {4.2}Natural Transformations as Unit Conversions}{4}{}%
+\contentsline {subsection}{\numberline {4.3}Invariance of Dimensionless Groups}{4}{}%
+\contentsline {section}{\numberline {5}Isometric and Isomorphic Invariances}{4}{}%
+\contentsline {subsection}{\numberline {5.1}Isometric Invariance}{4}{}%
+\contentsline {subsection}{\numberline {5.2}Isomorphic Invariance}{4}{}%
+\contentsline {section}{\numberline {6}Equivalence Classes via Dimensionless Groups}{4}{}%
+\contentsline {subsection}{\numberline {6.1}Classification of Systems}{4}{}%
+\contentsline {subsection}{\numberline {6.2}Formation of Equivalence Classes}{4}{}%
+\contentsline {section}{\numberline {7}Examples}{5}{}%
+\contentsline {subsection}{\numberline {7.1}Reynolds Number in Fluid Dynamics}{5}{}%
+\contentsline {subsection}{\numberline {7.2}Electrical-Mechanical System Analogy}{5}{}%
+\contentsline {section}{\numberline {8}Extension to Dynamical Systems}{6}{}%
+\contentsline {subsection}{\numberline {8.1}Differential Equations as Morphisms}{6}{}%
+\contentsline {subsection}{\numberline {8.2}Transducers as Isometric Morphisms}{6}{}%
+\contentsline {section}{\numberline {9}Overfitting and Linear Dependence in Dimension Vector Spaces}{6}{}%
+\contentsline {subsection}{\numberline {9.1}Linearly Dependent Units and Dimensional Redundancy}{6}{}%
+\contentsline {subsection}{\numberline {9.2}Example: Weight, Mass, and Acceleration}{6}{}%
+\contentsline {subsection}{\numberline {9.3}Implications for Modeling and Overfitting}{7}{}%
+\contentsline {subsection}{\numberline {9.4}Avoiding Dimensional Overfitting in Models}{7}{}%
+\contentsline {subsection}{\numberline {9.5}Analogies with Machine Learning}{7}{}%
+\contentsline {section}{\numberline {10}Applications to Machine Learning Models}{8}{}%
+\contentsline {subsection}{\numberline {10.1}Categorical Representation of Machine Learning Models}{8}{}%
+\contentsline {subsection}{\numberline {10.2}Dimensionless Groups in Machine Learning}{8}{}%
+\contentsline {subsection}{\numberline {10.3}Transfer Learning as a Functor}{8}{}%
+\contentsline {section}{\numberline {11}Conclusion}{8}{}%
